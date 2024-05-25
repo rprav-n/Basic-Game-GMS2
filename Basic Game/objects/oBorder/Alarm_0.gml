@@ -1,0 +1,1 @@
+text = string(irandom_range(0, 9));

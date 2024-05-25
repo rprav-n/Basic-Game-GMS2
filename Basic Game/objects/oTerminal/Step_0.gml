@@ -9,5 +9,24 @@ var v_move = key_down - key_up;
 hsp = h_move * spd;
 vsp = v_move * spd;
 
+// horizontal collision
+if (place_meeting(x+hsp, y, oBorder)) {
+	var _onpixel = sign(hsp);
+	while (!place_meeting(x+_onpixel, y, oBorder)) {
+		x += _onpixel;
+	}
+	hsp = 0;
+}
+
 x += hsp;
+
+// vertical collision
+if (place_meeting(x, y+vsp, oBorder)) {
+	var _onpixel = sign(vsp);
+	while (!place_meeting(x, y+_onpixel, oBorder)) {
+		y += _onpixel;
+	}
+	vsp = 0;
+}
+
 y += vsp;

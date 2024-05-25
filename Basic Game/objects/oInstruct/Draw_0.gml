@@ -13,7 +13,7 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
 // draw text
-draw_text_transformed(x, y, "Use the arrow keys to move and break the blocks!aas", scale, scale, 0);
-draw_text_transformed(x, y+50, "Don't let them leave the screen!", scale, scale, 0);
+draw_text_transformed(x, y, "use the arrow keys to move and delete viruses", scale, scale, 0);
+draw_text_transformed(x, y+50, "delete the viruses before they enter the server!", scale, scale, 0);
 
 draw_set_alpha(1);

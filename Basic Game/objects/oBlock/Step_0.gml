@@ -8,8 +8,14 @@ if (place_meeting(x, y, oTerminal)) {
 	instance_destroy();
 }
 
-if (y < 0) {
-	game_restart();
+if (y < -40) {
+	if (!instance_exists(oFade)) {
+		with(instance_create_layer(x, y, "Fade", oFade)) {
+			fadeout = true;
+			a = 0;
+			target_room = rGameover;
+		}	
+	}
 }
 
 
